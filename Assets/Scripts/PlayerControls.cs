@@ -8,7 +8,18 @@ public class PlayerControls : MonoBehaviour
 
     void Update()
     {
-        float xThrow = Input.GetAxis("Horizontal");        
+        ProcessTranslation();
+        ProcessRotation();
+    }
+
+    void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(-30f, 30f, 0f);
+    }
+
+    void ProcessTranslation()
+    {
+        float xThrow = Input.GetAxis("Horizontal");
         float yThrow = Input.GetAxis("Vertical");
 
         float xOffset = xThrow * Time.deltaTime * controlSpeed;
@@ -20,6 +31,5 @@ public class PlayerControls : MonoBehaviour
         float clampedYPos = Mathf.Clamp(yPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
-        
     }
 }

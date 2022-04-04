@@ -1246,7 +1246,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6428384988228044534}
-  m_Mesh: {fileID: -4664793100313654021, guid: d84ec9911cfe0f142b57114817caaf7d, type: 3}
+  m_Mesh: {fileID: -443936529078758090, guid: aaf7aa019f23a0940afebb1950259a1d, type: 3}
 --- !u!23 &6441363106133983562
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1301,8 +1301,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlSpeed: 30
-  xRange: 10
-  yRange: 5
+  xRange: 18
+  yRange: 10
+  positionPitchFactor: -2
+  controlPitchFactor: -15
+  positionYawFactor: 2
+  controlRollFactor: -20
 --- !u!1 &6830091110030220961
 GameObject:
   m_ObjectHideFlags: 0
